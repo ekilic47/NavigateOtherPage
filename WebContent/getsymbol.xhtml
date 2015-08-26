@@ -1,35 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-xmlns:h="http://java.sun.com/jsf/html"
-xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Insert title here</title>
 </head>
 <body>
-<h:messages/>
+	<h:messages />
 
-<ul>
-<li>error message 1</li>
-<li>error message 2</li>
 
-</ul>
-
-<h:form>
-<h:form>
-<h:selectOneMenu value="#{b1.sym}" required="true" label="Stock symbol"
-requiredMessage="Input is missing!">
-<f:selectItems value="#{b2.symbols}"/>
-</h:selectOneMenu>
+	<h:form>
+		<h:form>
+			<h:selectOneMenu value="#{b1.sym}" required="true"
+				label="Stock symbol" requiredMessage="Input is missing!">
+				<f:selectItems value="#{b2.symbols}" />
+			</h:selectOneMenu>
 on
 <h:inputText value="#{b1.quoteDate}" required="true" label="Quote date">
-<f:convertDateTime dateStyle="short"/>
-</h:inputText>
-<h:commandButton action="ok"></h:commandButton>
-</h:form>
+				<f:convertDateTime dateStyle="short" />
+			</h:inputText>
+			<h:commandButton action="ok"></h:commandButton>
+		</h:form>
 
-</h:form>
+	</h:form>
 
 </body>
 </html>
